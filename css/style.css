@@ -39,9 +39,15 @@
   }
 
   /* bigger screens  */
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width:900px) {
     .hide-icon {
       display: none !important;
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    .hide-icon {
+
     }
   }
 
