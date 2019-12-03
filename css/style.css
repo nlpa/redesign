@@ -40,18 +40,24 @@
     transform: translate3d(110.328125px, 0, 0);
   }
 
+  /* descriptive text for screen readers */
+  .hidden-txt {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
   /* bigger screens  */
-  @media screen and (min-width:900px) {
+  /* @media screen and (min-width:900px) {
     .hide-icon {
       display: none !important;
     }
-  }
+  } */
 
-  @media screen and (max-width:900px) {
-    .hide-icon {
 
-    }
-  }
 
   @media screen and (prefers-reduced-motion: reduce){
   html{
