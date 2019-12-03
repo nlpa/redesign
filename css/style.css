@@ -37,4 +37,32 @@
     -webkit-transform: translate3d(110.328125px, 0, 0);
     transform: translate3d(110.328125px, 0, 0);
   }
+
+  /* bigger screens  */
+  @media screen and (min-width: 900px) {
+    .hide-icon {
+      display: none !important;
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+
 </style>
