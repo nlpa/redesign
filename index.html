@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://eecs485staff.github.io/eecs485.org/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EECS 485">
+  <meta name="keywords" content="EECS485, EECS 485, Web Systems, University of Michigan Computer Science">
+  <title>EECS 485</title>
+  <link rel="stylesheet" type="text/css" href="./EECS 485_files/semantic.min.css">
+  <!-- icons -->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
+
+  <!-- FullCalendar -->
+  <link rel="stylesheet" type="text/css" href="./EECS 485_files/fullcalendar.min.css">
+
+  <style>
+    /* This fixes a bug in Semantic UI on iOS that breaks scrolling back to
+     * the top by tapping the status bar.
+     * https://github.com/Semantic-Org/Semantic-UI/issues/1985#issuecomment-110051913
+     */
+    html, body {
+      height: initial;
+    }
+
+    /* Increased specificity to override SemanticUI styles on mobile. */
+    .container .april-fools.april-fools.april-fools-hidden.april-fools-hidden {
+      display: none !important;
+    }
+  </style>
+<style>
+  .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {   -webkit-transform: translate3d(110.328125px, 0, 0);
+  transform: translate3d(110.328125px, 0, 0); } </style></head>
+
+<body class="pushable">
+  <!-- Nav bar on left side -->
+  <div class="ui left vertical inverted sidebar labeled icon menu overlay visible" style="">
+    <a class="item" href="https://leccap.engin.umich.edu/leccap/site/e391mrn72en9f5wrm9a" target="_blank">
+      <i class="video icon"></i>
+      Recordings
+    </a>
+    <a class="item" href="https://drive.google.com/drive/folders/19TX_NCy8zfOGqq5Mm-5iDYvzq5hyvoIn?usp=sharing" target="_blank">
+      <i class="google icon"></i>
+      Files
+    </a>
+    <a class="item" href="https://piazza.com/class/jvmm2gwi1gv27z" target="_blank">
+      <i class="talk outline icon"></i>
+      Piazza
+    </a>
+    <a class="item" href="http://eecsoh.org/" target="_blank">
+      <i class="help circle icon"></i>
+      Office Hours
+    </a>
+    <a class="item" href="https://autograder.io/web/course/46" target="_blank">
+      <i class="upload icon"></i>
+      Autograder
+    </a>
+
+    <a class="item" href="https://www.gradescope.com/courses/50036" target="_blank">
+      <i class="check icon"></i>
+      Gradescope
+    </a>
+  </div>
+
+  <!-- Main page  -->
+  <div class="pusher">
+    <div class="ui text container">
+      <button class="ui right floated icon button" id="left-sidebar-toggle">
+        <i class="bars icon"></i>
+      </button>
+
+      <h1>EECS 485: Web Systems</h1>
+
+      <p><i>Fall 2019</i></p>
+
+      <p>
+        A wholistic course of modern web systems and technologies, covering front end and back end.  Build an Instagram clone in the first half of the semester, and a Google clone in the second.  <a href="https://eecs485staff.github.io/eecs485.org/assets/Syllabus.pdf" target="_blank">Syllabus</a>
+      </p>
+
+      <!-- Projects section -->
+      <div class="ui section divider"></div>
+      <div class="ui text container" id="projects">
+        <h2 class="first">Projects</h2>
+        <div class="ui three stackable cards">
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/">
+            <div class="content">
+              <div class="header">
+                Project 1
+              </div>
+              <div class="description">
+                <p>Templated static site generator</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p2-insta485-serverside/">
+            <div class="content">
+              <div class="header">
+                Project 2
+              </div>
+              <div class="description">
+                <p>Server-side dynamic pages</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p3-insta485-clientside/">
+            <div class="content">
+              <div class="header">
+                Project 3
+              </div>
+              <div class="description">
+                <p>Client-side dynamic pages</p>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p4-mapreduce/">
+            <div class="content">
+              <div class="header">
+                Project 4
+              </div>
+              <div class="description">
+                <p>Map reduce</p>
+              </div>
+            </div>
+          </a>
+
+
+          <!--
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p5-search-engine/">
+            <div class="content">
+              <div class="header">
+                Project 5
+              </div>
+              <div class="description">
+                <p>Wikipedia search engine</p>
+              </div>
+            </div>
+          </a>
+          -->
+
+          <!-- P6 will be hidden/unhidden automatically.  See JS. -->
+          <a class="ui raised card april-fools april-fools-hidden" target="_blank" href="http://bit.ly/eecs485-p6">
+            <div class="content">
+              <div class="header">
+                Project 6
+              </div>
+              <div class="description">
+                <p>Distributed Computing Architecture</p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Tutorials section -->
+      <div class="ui section divider"></div>
+      <div class="ui text container" id="tutorials">
+        <h2 class="first">Tutorials</h2>
+        <div class="ui three stackable cards">
+
+          <a class="ui raised card" target="_blank" href="https://www.w3schools.com/html/html_intro.asp">
+            <div class="content">
+              <div class="header">
+                HTML
+              </div>
+              <div class="description">
+                <p>w3Schools HTML Intro</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://www.w3schools.com/html/html_css.asp">
+            <div class="content">
+              <div class="header">
+                CSS
+              </div>
+              <div class="description">
+                <p>w3schools CSS Intro</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://docs.python.org/3/tutorial/index.html">
+            <div class="content">
+              <div class="header">
+                Python
+              </div>
+              <div class="description">
+                <p>Official Python Tutorial</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_os.html">
+            <div class="content">
+              <div class="header">
+                Operating System
+              </div>
+              <div class="description">
+                <p>Install web dev tools on your operating system</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_git.html">
+            <div class="content">
+              <div class="header">
+                Version Control
+              </div>
+              <div class="description">
+                <p><code>git</code> and GitLab</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_browser.html">
+            <div class="content">
+              <div class="header">
+                Browser Tools
+              </div>
+              <div class="description">
+                <p>Web dev features in popular web browsers</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_virtual_env.html">
+            <div class="content">
+              <div class="header">
+                Python virtual environment
+              </div>
+              <div class="description">
+                <p><code>python3 -m venv</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_pdb.html">
+            <div class="content">
+              <div class="header">
+                Python debugger
+              </div>
+              <div class="description">
+                <p><code>pdb</code> and <code>pdb++</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_pytest.html">
+            <div class="content">
+              <div class="header">
+                Python testing
+              </div>
+              <div class="description">
+                <p><code>pytest</code></p>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p1-insta485-static/setup_scripting.html">
+            <div class="content">
+              <div class="header">
+                Shell scripting
+              </div>
+              <div class="description">
+                <p>Command line automation</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://www.w3schools.com/sql/">
+            <div class="content">
+              <div class="header">
+                SQL
+              </div>
+              <div class="description">
+                <p>w3Schools SQL Intro</p>
+                <p>Projects: <code>P2</code>, <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p2-insta485-serverside/setup_sqlite.html">
+            <div class="content">
+              <div class="header">
+                SQLite
+              </div>
+              <div class="description">
+                <p>SQLite Tutorial</p>
+                <p>Projects: <code>P2</code>, <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p2-insta485-serverside/setup_flask.html">
+            <div class="content">
+              <div class="header">
+                Python/Flask
+              </div>
+              <div class="description">
+                <p>Dynamic pages</p>
+                <p>Projects: <code>P2</code>, <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p2-insta485-serverside/setup_aws.html">
+            <div class="content">
+              <div class="header">
+                Amazon Web Services
+              </div>
+              <div class="description">
+                <p>Projects: <code>P2</code>, <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p2-insta485-serverside/setup_flask.html#rest-api">
+            <div class="content">
+              <div class="header">
+                REST API in Flask
+              </div>
+              <div class="description">
+                <p></p>
+                <p>Projects: <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p3-insta485-clientside/setup_restapi_tools.html">
+            <div class="content">
+              <div class="header">
+                REST API Tools
+              </div>
+              <div class="description">
+                <p><code>curl</code>, HTTPie</p>
+                <p>Projects: <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p3-insta485-clientside/setup_react.html">
+            <div class="content">
+              <div class="header">
+                React/JS
+              </div>
+              <div class="description">
+                <p>Toolchain, demo</p>
+                <p>Projects: <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p3-insta485-clientside/setup_endtoend_testing.html">
+            <div class="content">
+              <div class="header">
+                End-to-end testing
+              </div>
+              <div class="description">
+                <p>Headless Chrome</p>
+                <p>Projects: <code>P3</code>, <code>P5</code></p>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p4-mapreduce/python-processes-threads-sockets.html">
+            <div class="content">
+              <div class="header">
+                Python threads and sockets
+              </div>
+              <div class="description">
+                <p>Projects: <code>P4</code></p>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+
+
+      <div class="ui section divider"></div>
+      <div id="info"><h2>Schedule</h2></div>
+      <br>
+
+      <div id="calendar" class="fc fc-unthemed fc-ltr"><div class="fc-toolbar fc-header-toolbar">
+        <div class="fc-left">
+          <div class="fc-button-group">
+            <button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left">month</button>
+            <button type="button" class="fc-agendaWeek-button fc-button fc-state-default fc-state-active">week</button>
+            <button type="button" class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">day</button>
+          </div>
+        </div>
+      </div></div>
+      <script>
+       // Change calendar ID used by FullCalendar JavaScript code, below
+       calendarId = 'umich.edu_0bfpi8dv4u98hakenk9l917fm4@group.calendar.google.com';
+      </script>
+      <p>
+        <i class="sticky note icon"></i>
+        <a href="https://calendar.google.com/calendar/embed?src=umich.edu_0bfpi8dv4u98hakenk9l917fm4@group.calendar.google.com&amp;ctz=America%2FNew_York" target="_blank">Open calendar in new window</a>
+      </p>
+
+      <!-- Schedule -->
+      <table class="ui celled striped table">
+        <thead>
+          <tr>
+            <th class="three wide">Day</th>
+            <th>Topic</th>
+            <th>Deadline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Tue Sep 3</p>
+              <p>Thu Sep 5</p>
+            </td>
+            <td>
+              <p>Introduction</p>
+              <p>Web Basics</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Sep 10</p>
+              <p>Thu Sep 12</p>
+            </td>
+            <td>
+              <p>Dynamic Pages</p>
+              <p>Sessions</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Sep 17</p>
+              <p>Thu Sep 19</p>
+            </td>
+            <td>
+              <p>Encryption</p>
+              <p>Web Security</p>
+            </td>
+            <td class="warning">
+              Project 1 due Tue Sep 17, 8pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Sep 24</p>
+              <p>Thu Sep 26</p>
+            </td>
+            <td>
+              <p>REST APIs</p>
+              <p>Javascript 1</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Oct 1</p>
+              <p>Thu Oct 3</p>
+            </td>
+            <td>
+              <p>Javascript 2</p>
+              <p>Asynchronous Programming</p>
+            </td>
+            <td class="warning">
+              Project 2 due Tue Oct 1, 8pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Oct 8</p>
+              <p>Thu Oct 10</p>
+            </td>
+            <td>
+              <p>Networking</p>
+              <p>Google File System</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Oct 15</p>
+              <p>Thu Oct 17</p>
+            </td>
+            <td>
+              <p><i>No class - fall study break</i></p>
+              <p>Blockchain</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Oct 22</p>
+              <p>Thu Oct 24</p>
+            </td>
+            <td>
+              <p>Map Reduce</p>
+              <p>OS and Parallelism</p>
+            </td>
+            <td class="warning">
+              Project 3 due Tue Oct 22, 8pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Oct 29</p>
+              <p>Thu Oct 31</p>
+            </td>
+            <td>
+              <p><i>No class - midterm exam</i></p>
+            </td>
+            <td class="negative">
+              <i class="attention icon"></i>
+              Midterm Tue Oct 29, 7pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Nov 5</p>
+              <p>Thu Nov 7</p>
+            </td>
+            <td>
+              <p>Information Retrieval 1</p>
+              <p>Information Retrieval 2</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Nov 12</p>
+              <p>Thu Nov 14</p>
+            </td>
+            <td>
+              <p>Information Retrieval 3</p>
+              <p>DNS and CDNs</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Nov 19</p>
+              <p>Thu Nov 21</p>
+            </td>
+            <td>
+              <p>Scaling: Datacenters and the Cloud</p>
+              <p>Machine Learning</p>
+            </td>
+            <td class="warning">
+              Project 4 due Tue Nov 19, 8pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Nov 26</p>
+              <p>Thu Nov 28</p>
+            </td>
+            <td>
+              <p>Recommender Systems</p>
+              <p><i>No class - Thanksgiving Recess</i></p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Dec 3</p>
+              <p>Thu Dec 5</p>
+            </td>
+            <td>
+              <p>Auctions</p>
+              <p>Ethics</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Dec 10</p>
+            </td>
+            <td>
+              <p>Dark Web</p>
+            </td>
+            <td class="warning">
+              Project 5 due Tue Dec 10, 8pm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tue Dec 17</p>
+            </td>
+            <td>
+              <p><i>Final exam</i></p>
+            </td>
+            <td class="negative">
+              <i class="attention icon"></i>
+              Final Tue Dec 17, 7pm
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <!-- People section -->
+      <div class="ui section divider"></div>
+      <div id="people"><h2>People</h2></div>
+      <div class="ui hidden divider"></div>
+      <div class="ui three stackable cards">
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/awdeorio.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Andrew DeOrio
+            </div>
+            <p><i class="icon envelope"></i>awdeorio@umich.edu</p>
+            <p><i class="icon calendar"></i>10:30 1109 FXB</p>
+            <p><i class="icon calendar"></i>2:30 1571 GGBL</p>
+            <p><i class="icon apple"></i>MacOS, <i class="icon linux"></i>Linux</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/almomani.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Raed Almomani
+            </div>
+            <p><i class="icon envelope"></i>almomani@umich.edu</p>
+            <p><i class="icon calendar"></i>6:00 1109 FXB</p>
+            <p><i class="icon windows"></i>Windows 10</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/kmamin.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Krishan Amin
+            </div>
+            <p><i class="icon envelope"></i>kmamin@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 1:30PM 1012 FXB</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/sbein.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Scott Beinlich
+            </div>
+            <p><i class="icon envelope"></i>sbein@umich.edu</p>
+            <p><i class="icon calendar"></i>Thursday 4:00PM 1690 BBB</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/cmfh.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Christina Fosheim-Hoag
+            </div>
+            <p><i class="icon envelope"></i>cmfh@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 9:30AM 1680 IOE</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/biswash.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Biswash Ghimire
+            </div>
+            <p><i class="icon envelope"></i>biswash@umich.edu</p>
+            <p><i class="icon calendar"></i>Wednesday 3:00PM 185 EWRE</p>
+            <p><i class="icon windows"></i>Windows 10</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/jackgood.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Jack Good
+            </div>
+            <p><i class="icon envelope"></i>jackgood@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 12:30PM 185 EWRE</p>
+            <p><i class="icon windows"></i>Windows 10</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/celezhe.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Ruizhe Huang
+            </div>
+            <p><i class="icon envelope"></i>celezhe@umich.edu</p>
+            <p><i class="icon calendar"></i>Thursday 5:00PM 1690 BBB</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/ryanpj.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Ryan Johnston
+            </div>
+            <p><i class="icon envelope"></i>ryanpj@umich.edu</p>
+            <p><i class="icon calendar"></i>Wednesday 11:30AM 1005 EECS</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/jumeng.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Julia Meng
+            </div>
+            <p><i class="icon envelope"></i>jumeng@umich.edu</p>
+            <p><i class="icon calendar"></i>Wednesday 5:00PM 1005 DOW</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/tphi.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Tyler Phillips
+            </div>
+            <p><i class="icon envelope"></i>tphi@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 2:30PM 3150 DOW</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/hawattoo.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Hassaan Wattoo
+            </div>
+            <p><i class="icon envelope"></i>hawattoo@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 3:30PM 1014 DOW</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/wenyiwu.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Wenyi Wu
+            </div>
+            <p><i class="icon envelope"></i>wenyiwu@umich.edu</p>
+            <p><i class="icon calendar"></i>Friday 4:30PM 3150 DOW</p>
+            <p><i class="icon apple"></i>MacOS</p>
+          </div>
+        </div>
+
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="./EECS 485_files/miczhang.jpg">
+          </div>
+          <div class="content">
+            <div class="header">
+              Michelle Zhang
+            </div>
+            <p><i class="icon envelope"></i>miczhang@umich.edu</p>
+            <p><i class="icon calendar"></i>Wednesday 1:30PM 2166 DOW</p>
+            <p><i class="icon windows"></i>Windows 10</p>
+          </div>
+        </div>
+      </div><!-- ui stackable cards -->
+      <div class="ui section divider"></div>
+    </div><!-- ui text container -->
+  </div>
+
+  <footer>
+    <div class="ui inverted menu">
+    </div>
+  </footer>
+
+  <script src="./EECS 485_files/jquery-3.1.1.min.js"></script>
+
+  <script src="./EECS 485_files/semantic.min.js"></script>
+
+  <!-- MomentJS is required for FullCalendar -->
+  <script src="./EECS 485_files/moment.min.js"></script>
+  <!-- FullCalendar (with Google Calendar support) -->
+    <script src="./EECS 485_files/fullcalendar.min.js"></script>
+  <script src="./EECS 485_files/gcal.min.js"></script>
+
+  <script src="./EECS 485_files/calendar.js"></script>
+  <script src="./EECS 485_files/halloween.js"></script>
+  <script>
+
+    (function() {
+      // Assume calendarId global variable was set in calendar section above
+      console.assert(calendarId);
+
+      renderSidebar();
+
+      // showAprilFoolsContent();
+    })();
+
+    function dayFunction(x) {
+      if (x.matches) { // if media query matches
+        calendar.renderCalendar(calendarId, 'agendaDay');
+      }
+      else {
+        calendar.renderCalendar(calendarId, 'agendaWeek');
+      }
+    }
+
+    var x = window.matchMedia("(max-width:900px)")
+    dayFunction(x)
+
+
+    // x.addListener(dayFunction(x)) // Attach listener function on state changes
+
+
+    function renderSidebar() {
+      $sidebar = $('.ui.sidebar');
+      $sidebar.sidebar({
+        dimPage: false,
+        transition: 'overlay',
+        mobileTransition: 'overlay',
+        exclusive: false,
+        closable: false
+      });
+      $sidebar.sidebar('attach events', '#left-sidebar-toggle');
+
+      // if (!isSmallScreen()) {
+      //   $sidebar.sidebar('toggle');
+      // }
+
+    }
+
+
+    // function showAprilFoolsContent() {
+    //   var currentDate = moment();
+    //   if (currentDate.date() === 1 && currentDate.month() === 3) {
+    //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+    //     // Note that month numbers are zero-indexed, so 3 actually indicates April!
+    //     $('.april-fools').removeClass('april-fools-hidden');
+    //   }
+    // }
+  </script>
+
+
+
+<walnut-highlight-tool></walnut-highlight-tool></body></html>
