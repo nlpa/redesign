@@ -50,12 +50,16 @@
     overflow:hidden;
   }
 
+
   /* bigger screens  */
-  /* @media screen and (min-width:900px) {
-    .hide-icon {
-      display: none !important;
+  @media screen and (max-width:900px) {
+    /* .ui.visible.left.sidebar {
+      visibility: hidden;
+    } */
+    .nav-icons {
+      display:none !important;
     }
-  } */
+  }
 
 
 

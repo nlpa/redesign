@@ -26,22 +26,22 @@
       Home
       <div class="menu">
         <a class="item" href="#projects">
-          <i class="code icon"></i>
+          <i class="nav-icons code icon"></i>
           Projects
         </a>
 
         <a class="item" href="#tutorials">
-          <i class="file alternate icon"></i>
+          <i class="nav-icons file alternate icon"></i>
           Tutorials
         </a>
 
         <a class="item" href="#info">
-          <i class="calendar alternate outline icon"></i>
+          <i class="nav-icons calendar alternate outline icon"></i>
           Schedule
         </a>
 
         <a class="item" href="#people">
-          <i class="user outline icon"></i>
+          <i class="nav-icons user outline icon"></i>
           People
         </a>
       </div>
@@ -50,28 +50,28 @@
       External Links
       <div class="menu">
         <a class="item" href="https://leccap.engin.umich.edu/leccap/site/e391mrn72en9f5wrm9a" target="_blank">
-          <i class="video icon"></i>
+          <i class="nav-icons video icon"></i>
           Recordings
         </a>
         <a class="item" href="https://drive.google.com/drive/folders/19TX_NCy8zfOGqq5Mm-5iDYvzq5hyvoIn?usp=sharing" target="_blank">
-          <i class="google icon"></i>
+          <i class="nav-icons google icon"></i>
           Files
         </a>
         <a class="item" href="https://piazza.com/class/jvmm2gwi1gv27z" target="_blank">
-          <i class="comment alternate icon"></i>
+          <i class="nav-icons comment alternate icon"></i>
           Piazza
         </a>
         <a class="item" href="http://eecsoh.org/" target="_blank">
-          <i class="help circle icon"></i>
+          <i class="nav-icons help circle icon"></i>
           Office Hours
         </a>
         <a class="item" href="https://autograder.io/web/course/46" target="_blank">
-          <i class="upload icon"></i>
+          <i class="nav-icons upload icon"></i>
           Autograder
         </a>
 
         <a class="item" href="https://www.gradescope.com/courses/50036" target="_blank">
-          <i class="check icon"></i>
+          <i class="nav-icons check icon"></i>
           Gradescope
         </a>
       </div>
@@ -84,10 +84,13 @@
     <div class="skip"><a href="#projects">Skip to Main Content</a></div>
 
     <div class="ui text container">
-      <button class="ui right floated icon button" id="left-sidebar-toggle">
-        <i class="bars icon"></i><p class="hidden-txt">Toggle Sidebar Navigation</p>
-      </button>
-
+      <div id="example1">
+      <!-- <div class="ui sticky"> -->
+        <button class="ui right floated icon button" id="left-sidebar-toggle">
+          <i class="bars icon"></i><p class="hidden-txt">Toggle Sidebar Navigation</p>
+        </button>
+      <!-- </div> -->
+      </div>
       <h1>EECS 485: Web Systems</h1>
 
       <p><i>Fall 2019</i></p>
@@ -891,6 +894,12 @@
       }
 
     }
+
+    $(document.innerHTML).ready(function(){
+       $('.ui.sticky').sticky({
+         context: '#example1'
+      });
+    });
 
     // function showAprilFoolsContent() {
     //   var currentDate = moment();
