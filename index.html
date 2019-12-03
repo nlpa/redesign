@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="./css/style.css">
 
+
 </head>
 
 <body class="pushable">
@@ -73,7 +74,7 @@
   <div class="pusher">
     <div class="skip"><a href="#projects">Skip to Main Content</a></div>
     <div class="ui text container">
-      <button class="ui right floated icon button" id="left-sidebar-toggle" style=position:sticky;top:0px;>
+      <button class="ui right floated icon button" id="left-sidebar-toggle">
         <i class="bars icon"></i> Toggle Sidebar
       </button>
 
@@ -840,27 +841,24 @@
     (function() {
       // Assume calendarId global variable was set in calendar section above
       console.assert(calendarId);
-
-      renderSidebar();
-
       // showAprilFoolsContent();
     })();
 
     function dayFunction(x) {
       if (x.matches) { // if media query matches
         calendar.renderCalendar(calendarId, 'agendaDay');
+        minimize = true;
       }
       else {
         calendar.renderCalendar(calendarId, 'agendaWeek');
       }
+      renderSidebar();
     }
 
+    // media query for smaller window size
     var x = window.matchMedia("(max-width:900px)")
+    var minimize = false;
     dayFunction(x)
-
-
-    // x.addListener(dayFunction(x)) // Attach listener function on state changes
-
 
     function renderSidebar() {
       $sidebar = $('.ui.sidebar');
@@ -873,9 +871,9 @@
       });
       $sidebar.sidebar('attach events', '#left-sidebar-toggle');
 
-      // if (!isSmallScreen()) {
-      //   $sidebar.sidebar('toggle');
-      // }
+      if (minimize == true) {
+        $sidebar.sidebar('toggle');
+      }
 
     }
 
