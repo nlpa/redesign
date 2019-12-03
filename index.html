@@ -14,23 +14,9 @@
   <!-- FullCalendar -->
   <link rel="stylesheet" type="text/css" href="./css/fullcalendar.min.css">
 
-  <style>
-    /* This fixes a bug in Semantic UI on iOS that breaks scrolling back to
-     * the top by tapping the status bar.
-     * https://github.com/Semantic-Org/Semantic-UI/issues/1985#issuecomment-110051913
-     */
-    html, body {
-      height: initial;
-    }
+  <link rel="stylesheet" href="./css/style.css">
 
-    /* Increased specificity to override SemanticUI styles on mobile. */
-    .container .april-fools.april-fools.april-fools-hidden.april-fools-hidden {
-      display: none !important;
-    }
-  </style>
-<style>
-  .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {   -webkit-transform: translate3d(110.328125px, 0, 0);
-  transform: translate3d(110.328125px, 0, 0); } </style></head>
+</head>
 
 <body class="pushable">
   <!-- Nav bar on left side -->
@@ -44,7 +30,7 @@
       Files
     </a>
     <a class="item" href="https://piazza.com/class/jvmm2gwi1gv27z" target="_blank">
-      <i class="talk outline icon"></i>
+      <i class="comment alternate icon"></i>
       Piazza
     </a>
     <a class="item" href="http://eecsoh.org/" target="_blank">
@@ -60,13 +46,30 @@
       <i class="check icon"></i>
       Gradescope
     </a>
+
+    <a class="item" href="#projects">
+      <i class="code icon"></i>
+      Projects
+    </a>
+
+    <a class="item" href="#tutorials">
+      <i class="file alternate icon"></i>
+      Tutorials
+    </a>
+
+    <a class="item" href="#info">
+      <i class="calendar alternate outline icon"></i>
+      Schedule
+    </a>
+
   </div>
 
   <!-- Main page  -->
   <div class="pusher">
+    <div class="skip"><a href="#projects">Skip to Main Content</a></div>
     <div class="ui text container">
-      <button class="ui right floated icon button" id="left-sidebar-toggle">
-        <i class="bars icon"></i>
+      <button class="ui right floated icon button" id="left-sidebar-toggle" style=position:sticky;top:0px;>
+        <i class="bars icon"></i> Toggle Sidebar
       </button>
 
       <h1>EECS 485: Web Systems</h1>
@@ -129,7 +132,7 @@
           </a>
 
 
-          <!--
+
           <a class="ui raised card" target="_blank" href="https://eecs485staff.github.io/p5-search-engine/">
             <div class="content">
               <div class="header">
@@ -140,7 +143,7 @@
               </div>
             </div>
           </a>
-          -->
+
 
           <!-- P6 will be hidden/unhidden automatically.  See JS. -->
           <a class="ui raised card april-fools april-fools-hidden" target="_blank" href="http://bit.ly/eecs485-p6">

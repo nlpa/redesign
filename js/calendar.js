@@ -1,19 +1,19 @@
 /**
  * calendar.js
  * Configures the calendar on the home page.
- * 
+ *
  * Requires:
  *   - jQuery
  *   - fullcalendar/fullcalendar.js
  *   - fullcalendar/gcal.js
- * 
+ *
  * Usage:
  *   Add the following HTML where the calendar should be displayed:
  *       <div id="calendar"></div>
  *   Include all JS dependencies and this script.
  *   Finally, trigger the calendar script by running
  *       calendar.renderCalendar('yourCalendarId@group.calendar.google.com');
- * 
+ *
  * See README for other maintenance instructions.
  */
 
@@ -47,7 +47,7 @@ var calendar = (function() {
         var color_tomato = 'rgb(196, 40, 28)';
         var color_basil = 'rgb(57, 125, 73)';
         var color_blueberry = 'rgb(64, 84, 175)';
-  
+
         if (event.title.startsWith('OH: ')) {
           element.css('background-color', color_tomato);
           element.css('border-color', color_tomato);
@@ -69,9 +69,9 @@ var calendar = (function() {
     }
 
 
-    function isSmallScreen() {
-        return screen.width < 900;
-    }
+    // function isSmallScreen() {
+    //     return screen.width < 900;
+    // }
 
     return {
         renderCalendar: renderCalendar,

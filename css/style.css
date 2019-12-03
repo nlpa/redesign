@@ -1,0 +1,40 @@
+<style>
+  /* This fixes a bug in Semantic UI on iOS that breaks scrolling back to
+   * the top by tapping the status bar.
+   * https://github.com/Semantic-Org/Semantic-UI/issues/1985#issuecomment-110051913
+   */
+  html, body {
+    height: initial;
+    /* added */
+    scroll-behavior: smooth;
+  }
+
+  .skip a{
+    background: white;
+    right: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+  .skip a:focus, .skip a:active{
+    top: 0;
+  }
+
+  :focus{
+    border: 2px solid black;
+  }
+
+  /* Increased specificity to override SemanticUI styles on mobile. */
+  .container .april-fools.april-fools.april-fools-hidden.april-fools-hidden {
+    display: none !important;
+  }
+
+  .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {
+    -webkit-transform: translate3d(110.328125px, 0, 0);
+    transform: translate3d(110.328125px, 0, 0);
+  }
+</style>
