@@ -75,7 +75,7 @@
     <div class="skip"><a href="#projects">Skip to Main Content</a></div>
     <div class="ui text container">
       <button class="ui right floated icon button" id="left-sidebar-toggle">
-        <i class="bars icon"></i> Toggle Sidebar
+        <i class="bars iconse"></i> Menu
       </button>
 
       <h1>EECS 485: Web Systems</h1>
@@ -411,7 +411,8 @@
       </p>
 
       <!-- Schedule -->
-      <table class="ui celled striped table">
+      <!-- *added the unstackable -->
+      <table class="ui celled striped unstackable table">
         <thead>
           <tr>
             <th class="three wide">Day</th>
@@ -872,11 +873,10 @@
       $sidebar.sidebar('attach events', '#left-sidebar-toggle');
 
       if (minimize == true) {
-        $sidebar.sidebar('toggle');
+        $sidebar.sidebar('hide');
       }
 
     }
-
 
     // function showAprilFoolsContent() {
     //   var currentDate = moment();
