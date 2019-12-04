@@ -40,15 +40,23 @@ var calendar = (function() {
 
             eventRender: recolorOfficeHoursEvent,
         });
+
+        // fixes no text in table header error 
+        $('.fc-axis.fc-widget-header').append( "<p>Date</p>");
+
     }
 
 
     function recolorOfficeHoursEvent(event, element) {
-        var color_tomato = 'rgb(196, 40, 28)';
-        var color_basil = 'rgb(57, 125, 73)';
-        var color_blueberry = 'rgb(64, 84, 175)';
+        // var color_tomato = 'rgb(196, 40, 28)';
+        // var color_basil = 'rgb(57, 125, 73)';
+        // var color_blueberry = 'rgb(64, 84, 175)';
+        var color_tomato = 'rgb(89, 11, 53)';
+        var color_basil = 'rgb(37, 125, 123)';
+        var color_blueberry = 'rgb(34, 54, 143)';
 
-        if (event.title.startsWith('OH: ')) {
+        // changed from OH to Office Hours
+        if (event.title.startsWith('Office Hours: ')) {
           element.css('background-color', color_tomato);
           element.css('border-color', color_tomato);
         }

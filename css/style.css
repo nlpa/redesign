@@ -17,6 +17,15 @@
     text-decoration: underline;
   }
 
+  .ui.card:hover {
+    filter: grayscale(60%) !important;
+
+  }
+
+  /* th.fc-axis.fc-widget-header:before {
+    content: "Date";
+  } */
+
   .skip a{
     background: white;
     right: 0;
@@ -33,8 +42,9 @@
     width: 150px;
   }
 
-  :focus, .ui.button:focus{
-    border: 2px solid black;
+  :focus, .ui.button:focus, .ui.card:hover {
+    border: 2px solid black !important;
+
   }
 
   /* Increased specificity to override SemanticUI styles on mobile. */
