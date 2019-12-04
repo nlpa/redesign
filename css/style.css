@@ -60,7 +60,7 @@
   }
 
   .ui.header {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
   /* smaller screens  */
