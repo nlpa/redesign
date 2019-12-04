@@ -41,18 +41,16 @@ var calendar = (function() {
             eventRender: recolorOfficeHoursEvent,
         });
 
-        // fixes no text in table header error 
+        // fixes no text in table header error
         $('.fc-axis.fc-widget-header').append( "<p>Date</p>");
 
     }
 
 
     function recolorOfficeHoursEvent(event, element) {
-        // var color_tomato = 'rgb(196, 40, 28)';
-        // var color_basil = 'rgb(57, 125, 73)';
-        // var color_blueberry = 'rgb(64, 84, 175)';
+        // changed to darker colors for higher contrast
         var color_tomato = 'rgb(89, 11, 53)';
-        var color_basil = 'rgb(37, 125, 123)';
+        var color_basil = 'rgb(24, 74, 72)';
         var color_blueberry = 'rgb(34, 54, 143)';
 
         // changed from OH to Office Hours
@@ -75,7 +73,6 @@ var calendar = (function() {
           content: event.location,
         });
     }
-
 
     // function isSmallScreen() {
     //     return screen.width < 900;

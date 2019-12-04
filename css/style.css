@@ -22,10 +22,6 @@
 
   }
 
-  /* th.fc-axis.fc-widget-header:before {
-    content: "Date";
-  } */
-
   .skip a{
     background: white;
     right: 0;
@@ -44,7 +40,6 @@
 
   :focus, .ui.button:focus, .ui.card:hover {
     border: 2px solid black !important;
-
   }
 
   /* Increased specificity to override SemanticUI styles on mobile. */

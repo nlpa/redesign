@@ -83,7 +83,7 @@
 
   <!-- Main page  -->
   <div class="pusher">
-    <div class="ui text container" id="example1">
+    <div class="ui text container" id="sticky-hold">
 
       <!-- sticky nav button -->
       <div class="ui internal right rail">
@@ -873,6 +873,8 @@
         calendar.renderCalendar(calendarId, 'agendaWeek');
       }
       renderSidebar();
+      // focus();
+
     };
 
     // media query for smaller window size
@@ -895,21 +897,27 @@
         $sidebar.sidebar('hide');
       }
 
-
     };
 
     $('.ui.sticky').sticky({
-      context: '#example1',
+      context: '#sticky-hold',
     });
 
-    // function showAprilFoolsContent() {
-    //   var currentDate = moment();
-    //   if (currentDate.date() === 1 && currentDate.month() === 3) {
-    //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
-    //     // Note that month numbers are zero-indexed, so 3 actually indicates April!
-    //     $('.april-fools').removeClass('april-fools-hidden');
-    //   }
-    // }
+    // calendar focus
+    $(document).keypress(function (e) {
+      if (e.which == 9) {
+          $("#calendar").focus();
+      }
+    });
+
+    function showAprilFoolsContent() {
+      var currentDate = moment();
+      if (currentDate.date() === 1 && currentDate.month() === 3) {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+        // Note that month numbers are zero-indexed, so 3 actually indicates April!
+        $('.april-fools').removeClass('april-fools-hidden');
+      }
+    }
   </script>
 
 
