@@ -904,9 +904,9 @@
     });
 
     // calendar focus
-    $(document).keypress(function (e) {
+    $("#fc-scoller").keydown(function (e) {
       if (e.which == 9) {
-          $("#calendar").focus();
+          $("#fc-scroller").focus();
       }
     });
 
