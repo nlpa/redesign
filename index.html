@@ -14,7 +14,6 @@
   <!-- icons -->
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css'>
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" /> -->
-
   <!-- FullCalendar -->
   <link rel="stylesheet" type="text/css" href="./css/fullcalendar.min.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -86,7 +85,7 @@
   <div class="pusher">
     <div class="ui text container" id="example1">
 
-      <!-- <div class="ui segment"> -->
+      <!-- sticky nav button -->
       <div class="ui internal right rail">
       <div class="ui sticky">
         <h1 class="ui header">Nav</h1>
@@ -96,7 +95,6 @@
         </button>
       </div>
       </div>
-      <!-- </div> -->
 
       <div class="skip"><a href="#projects">Skip to Main Content</a></div>
 
@@ -108,9 +106,7 @@
       <p>
         A wholistic course of modern web systems and technologies, covering front end and back end.
         Build an Instagram clone in the first half of the semester, and a Google clone in the second.
-        <a href="https://eecs485staff.github.io/eecs485.org/assets/Syllabus.pdf" target="_blank">
-          Syllabus<p class="hidden-txt">(PDF)</p>
-        </a>
+        <a href="https://eecs485staff.github.io/eecs485.org/assets/Syllabus.pdf" target="_blank">Syllabus<p class="hidden-txt">(PDF)</p></a>
       </p>
 
       <!-- Projects section -->
@@ -906,13 +902,9 @@
 
     };
 
-    // $(document.querySelector('#example1')).ready(function(){
-       $('.ui.sticky').sticky({
-          context: '#example1',
-         // context: '#left-sidebar-toggle',
-         // pushing: true
-      });
-    // });
+    $('.ui.sticky').sticky({
+      context: '#example1',
+    });
 
     // function showAprilFoolsContent() {
     //   var currentDate = moment();
