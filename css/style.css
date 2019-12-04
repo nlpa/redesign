@@ -25,7 +25,7 @@
     width: 150px;
   }
 
-  :focus{
+  :focus, .ui.button:focus{
     border: 2px solid black;
   }
 
@@ -50,15 +50,25 @@
     overflow:hidden;
   }
 
+  .ui.sticky {
+    /* margin: 20px auto auto auto; */
 
-  /* bigger screens  */
-  @media screen and (max-width:900px) {
-    /* .ui.visible.left.sidebar {
-      visibility: hidden;
-    } */
+    width: 100px;
+    height: 100px;
+    right:0px !important;
+    left:auto !important;
+  }
+
+  .ui.header {
+    visibility: hidden;
+  }
+
+  /* smaller screens  */
+  @media screen and (max-width:700px) {
     .nav-icons {
       display:none !important;
     }
+
   }
 
 

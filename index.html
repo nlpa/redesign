@@ -81,16 +81,23 @@
 
   <!-- Main page  -->
   <div class="pusher">
-    <div class="skip"><a href="#projects">Skip to Main Content</a></div>
+    <div class="ui text container" id="example1">
 
-    <div class="ui text container">
-      <div id="example1">
-      <!-- <div class="ui sticky"> -->
-        <button class="ui right floated icon button" id="left-sidebar-toggle">
-          <i class="bars icon"></i><p class="hidden-txt">Toggle Sidebar Navigation</p>
+      <!-- <div class="ui segment"> -->
+      <div class="ui internal right rail">
+      <div class="ui sticky">
+        <h1 class="ui header">Nav</h1>
+        <button class="ui floated icon button" id="left-sidebar-toggle">
+          <i class="bars icon"></i>
+          <p class="hidden-txt">Toggle Sidebar Navigation</p>
         </button>
-      <!-- </div> -->
       </div>
+      </div>
+      <!-- </div> -->
+
+      <div class="skip"><a href="#projects">Skip to Main Content</a></div>
+
+
       <h1>EECS 485: Web Systems</h1>
 
       <p><i>Fall 2019</i></p>
@@ -834,7 +841,7 @@
         </div>
       </div><!-- ui stackable cards -->
       <div class="ui section divider"></div>
-    </div><!-- ui text container -->
+</div><!-- ui text container -->
   </div>
 
   <footer>
@@ -871,12 +878,12 @@
         calendar.renderCalendar(calendarId, 'agendaWeek');
       }
       renderSidebar();
-    }
+    };
 
     // media query for smaller window size
-    var x = window.matchMedia("(max-width:900px)")
+    var x = window.matchMedia("(max-width:900px)");
     var minimize = false;
-    dayFunction(x)
+    dayFunction(x);
 
     function renderSidebar() {
       $sidebar = $('.ui.sidebar');
@@ -893,13 +900,16 @@
         $sidebar.sidebar('hide');
       }
 
-    }
 
-    $(document.innerHTML).ready(function(){
+    };
+
+    // $(document.querySelector('#example1')).ready(function(){
        $('.ui.sticky').sticky({
-         context: '#example1'
+          context: '#example1',
+         // context: '#left-sidebar-toggle',
+         // pushing: true
       });
-    });
+    // });
 
     // function showAprilFoolsContent() {
     //   var currentDate = moment();
