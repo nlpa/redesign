@@ -9,6 +9,14 @@
     scroll-behavior: smooth;
   }
 
+  .dark {
+    color: darkblue !important;
+  }
+
+  .dark:hover{
+    text-decoration: underline;
+  }
+
   .skip a{
     background: white;
     right: 0;
